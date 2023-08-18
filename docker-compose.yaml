@@ -12,4 +12,4 @@ services:
     environment:
       POSTGRES_DB: AmigosUnitTest
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: 30496039
