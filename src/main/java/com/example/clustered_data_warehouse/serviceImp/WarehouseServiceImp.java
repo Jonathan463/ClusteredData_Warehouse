@@ -7,13 +7,14 @@ import com.example.clustered_data_warehouse.request.WarehouseRequest;
 import com.example.clustered_data_warehouse.response.CustomResponseHandler;
 import com.example.clustered_data_warehouse.service.WarehouseService;
 import com.example.clustered_data_warehouse.util.WarehouseValidator;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 @Service
-//@Slf4j
+@Slf4j
 public class  WarehouseServiceImp implements WarehouseService {
 
     private final WareHouseRepository wareHouseRepository;
@@ -43,7 +44,7 @@ public class  WarehouseServiceImp implements WarehouseService {
                 wareHouseRepository.save(warehouse);
                 return CustomResponseHandler.responseBuilder(successfulResponse, String.valueOf(HttpStatus.ACCEPTED.value()));
             } catch (Exception exception) {
-                //log.info("Failed to save record. caused by " + exception.getMessage());
+                log.info("Failed to save record. caused by " + exception.getMessage());
                 throw new WarehouseException("Error saving warehouse data", exception);
             }
 
