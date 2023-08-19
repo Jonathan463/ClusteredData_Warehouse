@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CustomResponseHandler {
-    public static ResponseEntity<?> responseBuilder(String message, String httpStatus){
+    public static ResponseEntity<Map<String, String>> responseBuilder(String message, String httpStatus){
 
-        Map<String, Object> response = new HashMap<>();
+        Map<String, String> response = new HashMap<>();
 
-        if(httpStatus.equals("200")){
+        if(httpStatus.equals("202")){
             response.put("responseMessage", message);
             response.put("responseCode", "200");
         }

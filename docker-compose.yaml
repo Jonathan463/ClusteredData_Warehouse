@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 volumes:
   postgres_data:
@@ -6,17 +6,24 @@ volumes:
 
 services:
   postgres:
-    image: postgres:14
+    image: postgres:14-alpine3.18
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: AmigosUnitTest
+      POSTGRES_DB: ClusteredDataWarehouse
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 30496039
-
+    ports:
+      - "5432:5432"
   clustered-data-warehouse:
     build:
-      context: ./path/to/your/build/context
+      context: .
       dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ClusteredDataWarehouse
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 30496039
     ports:
       - "8080:8080"
+    depends_on:
+      - postgres

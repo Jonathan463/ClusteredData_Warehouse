@@ -7,6 +7,7 @@ import com.example.clustered_data_warehouse.request.WarehouseRequest;
 import com.example.clustered_data_warehouse.response.CustomResponseHandler;
 import com.example.clustered_data_warehouse.service.WarehouseService;
 import com.example.clustered_data_warehouse.util.WarehouseValidator;
+import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,14 +26,14 @@ public class  WarehouseServiceImp implements WarehouseService {
 
 
     @Override
-    public ResponseEntity<?> addClusteredData(WarehouseRequest request) {
+    public ResponseEntity<Map<String, String>> addClusteredData(WarehouseRequest request) {
 
         String successfulResponse = "Saved Successfully";
         String failedResponse = "Failed to Save Record";
         if(WarehouseValidator.isValid(request)) {
             BigDecimal amount = new BigDecimal(request.getAmount());
             try {
-            String currentDate = wareHouseRepository.getCurrentDate();
+            String currentDate = wareHouseRepository.getCurrentDateAndTime();
             Warehouse warehouse = Warehouse.builder()
                     .amount(amount)
                     .dealUniqueId(request.getDealUniqueId())

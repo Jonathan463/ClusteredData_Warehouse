@@ -52,7 +52,7 @@ class WarehouseServiceImpTest {
         verify(wareHouseRepository, times(1)).save(any(Warehouse.class));
         assertThat(response).satisfies(i -> {
             assertThat(i.getStatusCode()).isEqualTo(HttpStatus.ACCEPTED);
-            assertThat(i.getBody()).isEqualTo(Map.of("responseMessage", "Saved Successfully", "responseCode", "400"));
+            assertThat(i.getBody()).isEqualTo(Map.of("responseMessage", "Saved Successfully", "responseCode", "200"));
         });
         // Add more assertions for the response if needed
     }

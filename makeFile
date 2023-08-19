@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Remove Docker images with "clustered_data_warehouse" in their name
+docker rmi -f $(docker images -a | awk '$1 ~ /clustered_data_warehouse/ {print $3}')
+
+# Build the Maven project using the Maven Wrapper
+./mvnw clean install
+
+# Start Docker Compose with the "--remove-orphans" option
+docker-compose up --remove-orphans
