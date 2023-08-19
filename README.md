@@ -12,6 +12,7 @@ ClusteredData Warehouse is a data warehouse system developed by the Scrum team a
 - Testing
 - Documentation
 - Repository
+- Makefile
 
 __INTRODUCTION:__
 The ClusteredData Warehouse system is designed to accept and process FX deal details, ensuring that each deal is accurately validated, saved to the database, and tracked to prevent duplicate imports.
@@ -40,7 +41,7 @@ Start the application using the provided Docker Compose setup: docker-compose up
 __ERROR HANDLING:__
 The application employs robust error handling mechanisms and bean validation to ensure data integrity and prevent incorrect or incomplete data from being imported.
 
-_LOGGING:_
+__LOGGING:__
 Logging is implemented using a standard logging framework logback and SLF4J, providing detailed information about the application's operations and any potential issues.
 
 __TESTING:__
@@ -51,6 +52,15 @@ For detailed information about the application's architecture, code structure, a
 
 __REPOSITORY:__
 The source code and related files for the ClusteredData Warehouse project can be found in the GitHub repository: https://github.com/Jonathan463/ClusteredData_Warehouse
+
+__MAKEFILE:__
+A Makefile is provided to streamline the process of running the application, cleaning, building and starting. Some available commands include:
+
+- make remove: Remove Docker images with "clustered_data_warehouse" in their name
+
+- make build: Build the Maven project using the Maven Wrapper
+
+- make start: Start Docker Compose with the "--remove-orphans" option
 
 
 By the Scrum team at Bloomberg | August 18, 202
