@@ -1,0 +1,31 @@
+2023-08-19 03:35:02.920 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 7.0.1.Final
+2023-08-19 03:35:02.990 INFO  [restartedMain] c.e.c.ClusteredDataWarehouseApplication - Starting ClusteredDataWarehouseApplication using Java 17.0.6 with PID 1168 (C:\Users\DOMOWY\IdeaProjects\Clustered_Data_Warehouse\target\classes started by DOMOWY in C:\Users\DOMOWY\IdeaProjects\Clustered_Data_Warehouse)
+2023-08-19 03:35:02.991 DEBUG [restartedMain] c.e.c.ClusteredDataWarehouseApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-08-19 03:35:02.995 INFO  [restartedMain] c.e.c.ClusteredDataWarehouseApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-19 03:35:03.078 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-19 03:35:03.078 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-19 03:35:04.170 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-19 03:35:04.272 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interfaces.
+2023-08-19 03:35:05.031 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-19 03:35:05.041 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-19 03:35:05.043 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-19 03:35:05.043 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-19 03:35:05.131 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-19 03:35:05.132 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2052 ms
+2023-08-19 03:35:05.349 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-19 03:35:05.420 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-19 03:35:05.422 INFO  [restartedMain] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-08-19 03:35:05.609 INFO  [restartedMain] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-08-19 03:35:05.842 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-19 03:35:05.869 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-19 03:35:06.083 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a4ea102
+2023-08-19 03:35:06.085 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-19 03:35:06.512 INFO  [restartedMain] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-08-19 03:35:07.509 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-19 03:35:07.594 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-19 03:35:07.904 INFO  [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-19 03:35:07.981 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-19 03:35:08.374 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-19 03:35:08.395 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-19 03:35:08.417 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-19 03:35:08.430 INFO  [restartedMain] c.e.c.ClusteredDataWarehouseApplication - Started ClusteredDataWarehouseApplication in 6.329 seconds (process running for 7.546)

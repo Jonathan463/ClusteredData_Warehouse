@@ -41,7 +41,7 @@ __ERROR HANDLING:__
 The application employs robust error handling mechanisms and bean validation to ensure data integrity and prevent incorrect or incomplete data from being imported.
 
 _LOGGING:_
-Logging is implemented using a standard logging framework Log4j and SLF4J, providing detailed information about the application's operations and any potential issues.
+Logging is implemented using a standard logging framework logback and SLF4J, providing detailed information about the application's operations and any potential issues.
 
 __TESTING:__
 Unit tests have been created to thoroughly validate the application's components and functionalities. To run tests and check coverage:
