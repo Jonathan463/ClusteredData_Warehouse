@@ -1,14 +1,4 @@
-# Use a base image with Java
-FROM openjdk:11-jre-slim
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy the compiled JAR file into the container
-COPY target/your-service.jar your-service.jar
-
-# Expose the port your service will run on
+FROM openjdk:17-jdk-alphine
+ADD target/clustered-data-warehouse.jar clustered-data-warehouse.jar
 EXPOSE 8080
-
-# Command to run your service
-CMD ["java", "-jar", "your-service.jar"]
+CMD ["java", "-jar", "clustered-data-warehouse.jar"]
