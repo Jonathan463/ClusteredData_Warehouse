@@ -45,7 +45,7 @@ __LOGGING:__
 Logging is implemented using a standard logging framework logback and SLF4J, providing detailed information about the application's operations and any potential issues.
 
 __TESTING:__
-Unit tests have been created to thoroughly validate the application's components and functionalities. To run tests and check coverage:
+Integration and Unit test have been created to thoroughly validate the application's components and functionalities. To run tests and check coverage:
 
 __DOCUMENTION:__
 For detailed information about the application's architecture, code structure, and usage, please refer to the documentation file.
